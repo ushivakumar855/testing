@@ -35,7 +35,7 @@ const STOPWORDS = new Set([
 // Weak words that penalize the formatting/vocabulary score (action verb detection)
 const WEAK_WORDS = ["responsible for", "managed", "worked on", "assisted", "duties included", "had to", "developed a", "was involved in", "my main task was", "i was tasked with"];
 
-// --- Utility Functions ---
+
 
 /** Extracts unique, relevant keywords from text, ignoring common stopwords. */
 function extractKeywords(text) {
