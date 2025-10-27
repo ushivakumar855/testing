@@ -1,0 +1,78 @@
+**Dynamic Resume Analyzer**
+
+A responsive web application built with React that analyzes resumes for ATS compatibility, provides improvement suggestions, and allows users to format and export resumes using professional templates. Developed using Agile methodology.
+
+---
+
+**Frontend Features**
+
+- Authentication Login/Register Page.
+- Design a visually appealing, responsive user interface with attractive colors.
+- Include a header with the project title and logout button.
+- Add a footer section with information about the developers.
+
+---
+
+**Core Functionalities**
+
+1. **Resume Upload & Parsing**
+   - Accept `.txt` or `.pdf` resume files up to 2MB via drag-and-drop or file selection.
+   - Use regex to identify common resume sections: contact, skills, education, experience.
+   - Extract and categorize content within each section.
+
+2. **ATS Scoring & Feedback**
+   - Detect missing standard sections based on job role.
+   - Generate an ATS score (0–100) based on completeness, keyword presence, and formatting.
+   - Provide specific suggestions to improve weak or missing content.
+   - Recommend stronger alternatives for repetitive words.
+
+3. **Templates & Export**
+   - Offer multiple resume templates (standard, technical, creative) with visual themes.
+   - Automatically populate selected templates with parsed resume data.
+   - Recommend templates based on the user's job application purpose.
+   - Export the final resume as a downloadable PDF while preserving formatting.
+
+4. **AI Chatbot Integration**
+   - Integrate a chatbot to answer resume-related questions and offer improvement tips.
+   - Support detailed Q&A about ATS score breakdown and feedback.
+   - Provide static suggestions and random pretexted responses for variety.
+
+5. **Security & Performance**
+   - Resume parsing and analysis should complete within 15 seconds for 90% of uploads.
+   - Maintain 90.5% monthly availability (excluding maintenance).
+   - Encrypt resume data at rest using industry-standard encryption.
+   - Automatically delete resume data after 5 days of inactivity.
+   - Require strong password authentication for access.
+   - Log all security events with user ID, timestamp, and action details.
+   - Ensure accessibility features are supported.
+
+---
+
+**Implementation Tasks**
+
+- **Frontend/UI**
+  - Build login/register page.
+  - Design responsive layout with header and footer.
+  - Focus on clean, intuitive design.
+
+- **Data Handling**
+  - Enable resume and job description upload.
+  - Securely store user files and data.
+  - Implement PDF and text export functionality.
+
+- **Core Logic**
+  - Develop regex-based parsing engine.
+  - Create ATS scoring algorithm with weighted formula.
+  - Generate actionable feedback and suggestions.
+
+- **AI Integration**
+  - Set up chatbot with static and contextual responses.
+  - Ensure chatbot can respond based on user resume data.
+
+- **Code Quality & Security**
+  - Refactor and optimize codebase.
+  - Remove dummy functions and ensure dynamic behavior.
+  - Enforce TLS 1.2+ encryption across all communications.
+
+
+
