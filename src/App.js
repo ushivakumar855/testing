@@ -7,6 +7,8 @@ import "./App.css";
 export default function App() {
   const [showChatbot, setShowChatbot] = useState(false);
   // State for login/logout and user credentials for secure file upload
+  //alert("App.js loaded (inside src/App.js)");
+  console.log("App.js loaded (inside src/App.js)");
   const [authData, setAuthData] = useState({
     isLoggedIn: false,
     userEmail: null,

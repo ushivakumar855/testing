@@ -11,6 +11,8 @@ const SECTION = {
 };
 
 export default function App() {
+  console.log("(inside appv1.js) SECTIONS:", SECTIONS);
+  alert("(inside appv1.js) SECTIONS: " + JSON.stringify(SECTIONS));
   const [resumeText, setResumeText] = useState("");
   const [analysis, setAnalysis] = useState(null);
 

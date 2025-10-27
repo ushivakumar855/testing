@@ -10,7 +10,6 @@ const RESPONSES = {
   default: "I can help with general advice on ATS, keywords, formatting, or required sections. Ask me about your score breakdown!",
 };
 
-
 const GEMINI_API_KEY = process.env.REACT_APP_GEMINI_API_KEY ;   // here api key comes from .env file
 
 export default function Chatbot({ onClose, isOpen })  {

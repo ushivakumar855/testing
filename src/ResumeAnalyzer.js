@@ -1,7 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState, useCallback } from "react";
 
-// --- Configuration Constants (Centralized and Descriptive) ---
-
 // Section definitions for robust parsing using regex
 const RESUME_SECTIONS = {
   contact: /\b(contact|email|phone|linkedin|github|address)\b/i,
@@ -14,6 +12,7 @@ const RESUME_SECTIONS = {
   awards: /\b(awards|honors|achievements)\b/i,
 };
 
+console.log("RESUME_SECTIONS:", RESUME_SECTIONS);
 // Core sections for scoring (must-haves)
 const CORE_SECTIONS = ["contact", "summary", "experience", "skills", "education"];
 

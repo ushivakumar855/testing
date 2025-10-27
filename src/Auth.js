@@ -1,8 +1,8 @@
 import React, { useState, useCallback } from "react";
 
-// NOTE: This URL points to a mock Google Apps Script endpoint 
-// for demonstration purposes of authentication flow and security implementation.
-const APPS_SCRIPT_URL ="https://script.google.com/macros/s/AKfycbzTqKmb1sqsmGhh2g5MgBIw7JWtgYpEQ10cxZYIKFK0Kuitd6I_UYFKoUSoEIMDux1m/exec";
+// APPS SCRIPT URL FOR MOCK AUTHENTICATION 
+//const APPS_SCRIPT_URL ="https://script.google.com/macros/s/AKfycbzTqKmb1sqsmGhh2g5MgBIw7JWtgYpEQ10cxZYIKFK0Kuitd6I_UYFKoUSoEIMDux1m/exec";
+const APPS_SCRIPT_URL ="https://script.google.com/macros/s/AKfycbyo8gQ5QlmTx9OiNHD4YPvF_AK4DzBuwxNHTtt0-JrWjE5Ehr64eOGTBorcdrZ-plXV/exec";
 
 export default function Auth({ onLogin }) {
   const [isLogin, setIsLogin] = useState(true);
@@ -11,7 +11,7 @@ export default function Auth({ onLogin }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // SHA-256 helper for client-side password hashing (security simulation)
+
   const sha256 = useCallback(async (message) => {
     const encoder = new TextEncoder();
     const data = encoder.encode(message);
@@ -35,9 +35,15 @@ export default function Auth({ onLogin }) {
       setError("Please enter a valid email address.");
       return;
     }
+    else{
+      console.log("Email validated:", normalizedEmail);
+    }
     if (!password) {
       setError("Please enter a password.");
       return;
+    }
+    else{
+      console.log("Password provided of length:", password.length);
     }
 
     setLoading(true);
@@ -56,6 +62,7 @@ export default function Auth({ onLogin }) {
       if (result.status === "success") {
         // Successful login/register
         onLogin({ email: normalizedEmail, passwordHash }); 
+        console.log(`${isLogin ? "Login" : "Registration"} ✅️successful for:`, normalizedEmail);
       } else {
         // Handle API-side errors (e.g., user not found)
         setError(result.message || "Authentication failed. Check your credentials.");

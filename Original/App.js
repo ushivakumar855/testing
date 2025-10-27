@@ -9,6 +9,9 @@ const SECTIONS = {
   contact: /\b(contact|email|phone|linkedin|github|address)\b/i,
 };
 
+console.log("(inside App.js) SECTIONS:", SECTIONS);
+alert("(inside App.js) SECTIONS: " + JSON.stringify(SECTIONS));
+
 const RESUME_TEMPLATES = {
   modern: {
     name: "Modern Professional",
