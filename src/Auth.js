@@ -2,7 +2,8 @@ import React, { useState, useCallback } from "react";
 
 // APPS SCRIPT URL FOR MOCK AUTHENTICATION 
 //const APPS_SCRIPT_URL ="https://script.google.com/macros/s/AKfycbzTqKmb1sqsmGhh2g5MgBIw7JWtgYpEQ10cxZYIKFK0Kuitd6I_UYFKoUSoEIMDux1m/exec";
-const APPS_SCRIPT_URL ="https://script.google.com/macros/s/AKfycbyo8gQ5QlmTx9OiNHD4YPvF_AK4DzBuwxNHTtt0-JrWjE5Ehr64eOGTBorcdrZ-plXV/exec";
+//const APPS_SCRIPT_URL ="https://script.google.com/macros/s/AKfycbyo8gQ5QlmTx9OiNHD4YPvF_AK4DzBuwxNHTtt0-JrWjE5Ehr64eOGTBorcdrZ-plXV/exec";  // email trigger
+const APPS_SCRIPT_URL ="https://script.google.com/macros/s/AKfycbyPB9orNYhouyMcceAKhuO6XXYGmiumb0BFbALQFoByRz0pGc8x_6UklfEMcp2gmSr2/exec";
 
 export default function Auth({ onLogin }) {
   const [isLogin, setIsLogin] = useState(true);
